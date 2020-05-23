@@ -11,9 +11,15 @@ services:
       image: nginx:latest
       networks:
         - test                                    
-        
+      volumes: 
+        - nginx-data:/usr/share/nginx/html/:rw
+
 networks:
   test:
     driver: overlay
     attachable: true
-         
+
+volumes:
+  nginx-data:
+    external: true
+
