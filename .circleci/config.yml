@@ -5,9 +5,22 @@ orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
+jobs:
+  build:
+    environment:
+     IMAGE_NAME: davidcorino/haproxy
+    docker:
+      - image: davidcorino/haproxy:1.0
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker Image
+          command: docker build -t $IMAGE_NAME:latest .
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
+  build-master:
     jobs:
-      - welcome/run
+      - build:
+          filters:
+            branches:
+              only: master
