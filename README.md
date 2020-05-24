@@ -4,7 +4,7 @@
 
 **Note:** This is a personal lab, so there are some changes to the Haproxy image and some configuration files are copied.
 
-1. Have a docker cluster configured
+1. Have a docker swarm cluster configured
 
 **<u>Configuring the envinronment</u>**
 
@@ -14,7 +14,7 @@
    
 
    docker pull nginx
-   docker pull davidcorino / haproxy: <version>
+   docker pull davidcorino/haproxy: <version>
 
    
 
@@ -35,7 +35,7 @@
 
    
 
-   Change what you think is necessary in the "Dockerfile", after this build the image with the command:
+   Change what you think is necessary in the "Dockerfile"(**you can see in: docker_file directory**), after this build the image with the command:
 
    
 
@@ -76,7 +76,7 @@
 
    
 
-   **NOTE:** Rename the image in the file: docker-stack.yaml or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge.
+   **NOTE:** Rename the image in the file: docker-stack.yaml (**you can see it in deploy_files**) or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge.
 
    
 
@@ -86,4 +86,8 @@
 
    After this, you can try access the webpage.
 
-   
+5. Or just use the script:
+
+./build-and-deploy-automation.sh
+
+To Build/Deploy/Scale and see the logs from your service. 
