@@ -4,7 +4,7 @@
 
 **Note:** This is a personal lab, so there are some changes to the Haproxy image and some configuration files are copied.
 
-1. Have a docker cluster configured
+1. Have a docker swarm cluster configured
 
 **<u>Configuring the envinronment</u>**
 
