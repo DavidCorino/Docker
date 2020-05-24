@@ -48,7 +48,6 @@
    **NOTE:** Only do this if you change something and the image. 
 
    
-
 3. After pulling the images, execute the command:
 
    
