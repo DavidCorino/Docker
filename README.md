@@ -35,7 +35,7 @@
 
    
 
-   Change what you think is necessary in the "Dockerfile"(**you can see in: docker_file directory**), after this build the image with the command:
+   Change what you think is necessary in the "Dockerfile"(**you can see in docker_file directory**), after this build the image with the command:
 
    
 
@@ -76,7 +76,7 @@
 
    
 
-   **NOTE:** Rename the image in the file: docker-stack.yaml (**you can see it in deploy_files**) or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge.
+   **NOTE:** Rename the image in the file: docker-stack.yaml (**you can see it in directory deploy_files**) or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge.
 
    
 
@@ -88,6 +88,8 @@
 
 5. Or just use the script:
 
-   ./build-and-deploy-automation.sh
+   **./build-and-deploy-automation.sh** (**you can see it in directory scripts**)
 
    To Build/Deploy/Scale and see the logs from your service. 
+   
+   **NOTE**: The script is still being improved, and error procedures are being performed.
