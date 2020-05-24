@@ -1,0 +1,8 @@
+#!/bin/bash
+
+IMAGE_NAME=$1
+VERSION=$2
+DOCKERFILE=$3
+
+docker build -t $IMAGE_NAME:$VERSION $DOCKERFILE
+
