@@ -76,7 +76,7 @@
 
    
 
-   **NOTE:** Rename the image in the file: docker-stack.yaml or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge
+   **NOTE:** Rename the image in the file: docker-stack.yaml or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge.
 
    
 
