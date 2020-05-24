@@ -8,20 +8,16 @@
 
 **<u>Configuring the envinronment</u>**
 
-
 1. You can download the latest versions available with the commands below:
 
    
 
    docker pull nginx
-   docker pull davidcorino / haproxy: <version>
-
-   
+   docker pull davidcorino/haproxy:<version>
 
    Example: docker pull davidcorino/haproxy:1.0
 
    
-
 
 2. If you don't want to use the Haproxy image already ready, you can use the Dockerfile and all files that are in: https://github.com/DavidCorino/Docker/ and make the changes you want, after making the changes run the command:
 
@@ -49,7 +45,7 @@
 
    **NOTE:** Only do this if you change something and the image. 
 
-
+   
 
 3. After pulling the images, execute the command:
 
@@ -71,12 +67,11 @@
 
    
 
-
 4. After that it will be necessary to create the services, and for that to execute the command below:
 
    
 
-   **NOTE:** Rename the image in the file: docker-stack.yaml or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge.
+   **NOTE:** Rename the image in the file: docker-stack.yaml or use the command  docker tag davidcorino/haproxy:1.0 haproxy-challenge
 
    
 
@@ -87,3 +82,6 @@
    After this, you can try access the webpage.
 
    
+
+
+
