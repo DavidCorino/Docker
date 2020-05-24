@@ -5,16 +5,16 @@ RUN mkdir -p /etc/rsyslog.d/                            &&  \
         touch /var/log/haproxy.log                              &&  \
         ln -sf /dev/stdout /var/log/haproxy.log
 
-COPY ./etc/ /etc/
+COPY ./files/ /etc/
 
 # Include our custom entrypoint that will the the job of lifting
 # rsyslog alongside haproxy.
-COPY entrypoint.sh /
+COPY ./scripts/entrypoint.sh /usr/local/bin
 
 EXPOSE 80 443
 
 # Set our custom entrypoint as the image's default entrypoint
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
 
 # Make haproxy use the default configuration file
 CMD [ "-f", "/etc/haproxy.cfg" ]
