@@ -1,11 +1,15 @@
 #!/bin/bash
 
 build_image() {
+echo ""
 read -p "Enter Image Name " IMAGE_NAME
 read -p "Enter Image Version " VERSION
 read -p "Enter Image Dockerfile " DOCKERFILE
+echo ""
 
-docker build -t $IMAGE_NAME:$VERSION $DOCKERFILE
+docker build -t $IMAGE_NAME:$VERSION $DOCKERFILE 
+
+echo ""
 }
 
 deploy_service() {
@@ -18,15 +22,21 @@ echo ""
 read -p "Enter Image Name " NAMESPACE
 read -p "Enter Image Name " SERVICE_FILE
 
-docker stack deploy -c ../deploy_files/$SERVICE_FILE.yaml $NAMESPACE
+docker stack deploy -c ../deploy_files/$SERVICE_FILE.yaml $NAMESPACE 
+
+echo ""
 }
 
 scale_service() {
 
+echo ""
 read -p "Enter Service Name:" SERVICE_NAME
 read -p "Enter Number of Replicas:" REPLICAS
+echo ""
 
-docker service scale $SERVICE_NAME=$REPLICAS
+docker service scale $SERVICE_NAME=$REPLICAS 
+
+echo ""
 }
 
 while [ option != 0 ] ; do
