@@ -88,6 +88,6 @@
 
 5. Or just use the script:
 
-./build-and-deploy-automation.sh
+   ./build-and-deploy-automation.sh
 
-To Build/Deploy/Scale and see the logs from your service. 
+   To Build/Deploy/Scale and see the logs from your service. 
